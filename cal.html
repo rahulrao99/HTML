@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <script>
+            function subnumbers(){
+                var a=parseInt(document.getElementById('n1').value);
+                var b=parseInt(document.getElementById('n2').value);
+                var ans=a-b;
+
+                document.getElementById("mydiv").innerHTML="Substrct:"+ans;
+                document.getElementById("result").value=ans;
+
+            }
+        </script>
+    </head>
+    <body>
+        <form name="frm">
+            Number 1: <input type="text" name="num1" id="n1"><br>
+            Number 2: <input type="text" name="num2" id="n2"><br>
+            result  : <input type="text" name="result" id="result" disabled><br>
+                      <button type="button" name="sub" id="sub" value="sub" onclick="subnumbers()">Sub Numbers</button>
+        </form>
+
+        <div
+            id="mydiv">
+        </div>
+    </body>
+</html>
