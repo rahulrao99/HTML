@@ -1,0 +1,184 @@
+ <html>
+<head >Order form</head>
+<script>
+    function validate()
+    {
+        validatename()
+        validatecontactNo()
+    }
+
+    function validatename()
+    {
+        flag4=validateNamehere("nm")
+        flag1=validateNamehere("fnm")
+        flag3=validateNamehere("lnm")
+        
+
+        if(flag4)
+        {
+            alert("valid name")
+        }
+        if(flag1)
+        {
+            alert("valid name")
+        }
+        if(flag3)
+        {
+            alert("valid name")
+        }
+
+    }
+    function validateNamehere(fnm)
+    {
+        var fn=document.getElementById(fnm).value;
+        if(fn ==="" || !isNaN(fn))
+        {
+            alert("please input name in string format")
+            return false;
+        }
+        else{
+            // alert("valide name")
+            return true;
+        }
+    }
+
+    function validatecontactNo()
+    {
+        flag2=validateContact("phone")
+        if(flag2)
+        {
+            alert("valid contact number")
+        }
+    }
+    function validateContact(phone)
+    {
+        var ph=document.getElementById("phone").value;
+        if(ph ==="" || isNaN(ph))
+        {
+            alert("please input a number format")
+            return false;
+        }
+        else {
+                return true ;
+        }
+
+    }
+    
+</script>
+<body>
+
+    <form >
+            <fieldset>
+            <table>
+                Delivery Details
+               </tr><br>
+        
+               <tr>
+
+                  <td>
+                    full name :<input type="text" id="nm" name="nm"><br>
+                    first name:<input type="text" id="fnm" name="fnm">
+                
+                    last name:<input type="text" id="lnm" name="lnm"><br>
+                    address:<br>
+                    <input type="text" id="addr" name="addr"><br>
+                    street :address:<br>
+                    <input type="text" id="stadd" name="stadd"><br>
+                    street:address line2:<br>
+                    <input type="text" id="stadd2" name="stadd2"><br>
+                    city:<input type="text" id="city" name="city">
+                    state/Province:
+                    <input type="text" id="state" name="state"><br>
+                    
+                    postal /zipcode:<input type="text" id="post" name="post">
+                    country:
+                     <select >
+                        <option >please select</option>
+                        <option value="ind">india</option>
+                        <option value="aus">australia</option>
+                        <option value="bd">bangladesh</option>
+                    </select><br> 
+                  phone number:
+                  <input type="text" id="phone" name="phone">
+                  email:
+                  <input type="email" id="email" name="email">
+
+                    </td>
+             </tr>
+       
+    </table>
+    
+
+
+     <hr> 
+             <!-- // _____________________ -->
+          
+    <table>        
+         <div>
+            <tr>
+                <td>
+                  <input>
+                    Meal Choices:<br>
+                    <input type="checkbox" name="meal" id="meal">single entrees</input><br>
+                    Quantity:<br>
+                    <input type="text" id="qty" name="qty"><br>
+                    Diet Type: <select >
+                        <option >Diet Type</option>
+                        <option value="reg">regular</option>
+                        <option value="dia">Dibetic</option>
+                        <option value="low">low Residue</option>
+                    </select>
+                    Temperature:
+                    <select >
+                      
+                        <option value="hot">hot</option>
+                        <option value="chilled">chilled</option>
+                        <option value="frozen">frozen</option>
+                    </select><br>
+                    
+                    Payment:<br>
+                    <input type="radio" name="pay" id="pay" value="pay">Credit Card</input>
+                    <input type="radio" name="pay" id="debit" value="debit">Debit Card</input><br>
+
+                    first name:<br>
+                    <input type="text" id="fnmae" name="fname">
+                    last name:<br>
+                    <input type="text" id="lnmae" name="lname"><br>
+
+                   Credit Card No:<br>
+                    <input type="text" id="cred" name="cred">
+                   Security Code:<br>
+                    <input type="text" id="sec" name="sec"><br>
+
+                    Expiration Month:
+                    <select >
+                        <option value=""></option>
+                    </select>
+
+                    Expiration Year:
+                    <select >
+                        <option value=""></option>
+                    </select>
+                 </td>
+            </tr>
+        </table>    
+   
+         
+   
+            
+           <button type="button" id="btn" name="btn" value="btn" onclick="validate()">Submit</button>
+          
+        </fieldset>
+
+
+
+
+        </div>
+    </form>
+
+
+
+
+
+</body>
+ </html>
